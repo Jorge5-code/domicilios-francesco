@@ -11,8 +11,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
 import os
+
+# Import dj_database_url for production database configuration (optional)
+dj_database_url = None
+try:
+    import dj_database_url
+except ImportError:
+    pass  # dj_database_url is not required for development
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,8 +91,7 @@ DATABASES = {
 }
 
 # Use PostgreSQL in production if DATABASE_URL is provided
-if 'DATABASE_URL' in os.environ:
-    import dj_database_url
+if 'DATABASE_URL' in os.environ and dj_database_url:
     DATABASES = {
         'default': dj_database_url.parse(os.environ['DATABASE_URL'])
     }
