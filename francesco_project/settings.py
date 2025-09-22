@@ -139,7 +139,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # WhiteNoise configuration
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
 
@@ -147,3 +147,6 @@ STORAGES = {
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SSH public key for GitHub
+GITHUB_SSH_KEY = os.environ.get('GITHUB_SSH_KEY', 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF8WwaZ4iWYyFfMIEnv+vqjJjDwm2gB0eG3zaSRXjICq tu-email@example.com')
