@@ -1,0 +1,1 @@
+web: gunicorn francesco_project.wsgi
