@@ -136,6 +136,10 @@ STATICFILES_DIRS = [
 # For production
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+# Media files (user uploaded content)
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'francesco' / 'media'
+
 # WhiteNoise configuration
 STORAGES = {
     "staticfiles": {
