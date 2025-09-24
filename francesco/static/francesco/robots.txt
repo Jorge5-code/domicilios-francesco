@@ -6,6 +6,10 @@ Disallow: /static/admin/
 # Sitemap
 Sitemap: https://web-production-6ad82.up.railway.app/sitemap.xml
 
+# Domicilios Sogamoso - Francesco Delivery
+# El mejor servicio de domicilios en Sogamoso, Boyacá
+# Tres veces veloz - WhatsApp: 311 630 5437
+
 # Allow specific search engines
 User-agent: Googlebot
 Allow: /
